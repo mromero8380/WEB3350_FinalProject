@@ -16,6 +16,16 @@ const TaskNavigation = () => {
               All Tasks
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/tasks/new"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              New Task
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

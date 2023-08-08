@@ -5,6 +5,8 @@ import HomePage from "./pages/Home";
 import TaskRoot from "./pages/TaskRoot";
 import TasksPage, { taskLoader } from "./pages/Tasks";
 import TaskDetailPage, { taskDetailLoader } from "./pages/TaskDetail";
+import NewTaskPage from "./pages/NewTask";
+import { action as manipulateTaskAction } from "./components/TaskForm";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,11 @@ const router = createBrowserRouter([
             id: "task-detail",
             element: <TaskDetailPage />,
             loader: taskDetailLoader,
+          },
+          {
+            path: "new",
+            element: <NewTaskPage />,
+            action: manipulateTaskAction,
           },
         ],
       },
