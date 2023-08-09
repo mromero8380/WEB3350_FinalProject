@@ -4,7 +4,10 @@ import ErrorPage from "./pages/Error";
 import HomePage from "./pages/Home";
 import TaskRoot from "./pages/TaskRoot";
 import TasksPage, { taskLoader } from "./pages/Tasks";
-import TaskDetailPage, { taskDetailLoader } from "./pages/TaskDetail";
+import TaskDetailPage, {
+  taskDetailLoader,
+  action as deleteTaskAction,
+} from "./pages/TaskDetail";
 import NewTaskPage from "./pages/NewTask";
 import { action as manipulateTaskAction } from "./components/TaskForm";
 
@@ -23,8 +26,14 @@ const router = createBrowserRouter([
           {
             path: ":taskId",
             id: "task-detail",
-            element: <TaskDetailPage />,
             loader: taskDetailLoader,
+            children: [
+              {
+                index: true,
+                element: <TaskDetailPage />,
+                action: deleteTaskAction,
+              },
+            ],
           },
           {
             path: "new",

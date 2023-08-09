@@ -68,7 +68,6 @@ export async function action({ request, params }) {
   const data = await request.formData();
 
   const taskData = {
-    id: Math.random(),
     name: data.get("name"),
     description: data.get("description"),
     isComplete: false,

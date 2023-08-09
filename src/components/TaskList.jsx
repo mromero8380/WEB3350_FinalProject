@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import classes from "./TaskList.module.css";
-import TaskItem from "./TaskItem";
 
 const TaskList = (props) => {
   return (
     <div className={classes.tasks}>
-      <h1>All Tasks</h1>
+      <h1>Tasks</h1>
       <ul className={classes.list}>
         {props.tasks.map((task) => (
           <li key={task.id} className={classes.item}>

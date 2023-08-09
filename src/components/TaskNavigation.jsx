@@ -12,8 +12,31 @@ const TaskNavigation = () => {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
+              end
             >
               All Tasks
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/tasks?mode=complete"}
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+              end
+            >
+              Complete Tasks
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/tasks?mode=incomplete"}
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+              end
+            >
+              Incomplete Tasks
             </NavLink>
           </li>
           <li>

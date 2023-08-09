@@ -13,14 +13,14 @@
   text-decoration: none;
   color: inherit;
   display: flex;
-  background-color: lightseagreen;
+  background-color: #000080;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .item a:hover {
   transform: scale(1.02);
-  background-color: #000080;
+  background-color: lightseagreen;
 }
 
 .item img {
@@ -30,6 +30,9 @@
 
 .content {
   padding: 1rem;
+}
+.tasks h1 {
+  color: #000080;
 }
 .item h2 {
   margin: 0 0 1rem 0;
